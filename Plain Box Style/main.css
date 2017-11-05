@@ -1,0 +1,216 @@
+html, body {
+    background-color: #F2F2F2 !important;
+    color: #323232;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    font-family: 'Arimo', sans-serif;
+}
+
+h1, h2, h3, .changeColor {
+    font-family: 'Muli', sans-serif;
+}
+
+.mainCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+.align-middle {
+    transform: scale(0.90);
+}
+
+a {
+    color: #323232;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #52886E;
+}
+/*
+.align-middle {
+    border: 3px solid;
+}
+*/
+/* ---------------- 
+ *     HEADER 
+ * ---------------- */
+/*
+.container-fluid, .container {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #eee;
+}
+
+ul li {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+*/
+
+.header {
+    margin: 25px 0.5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: solid;
+    border-color: #323232;
+    border-width: 2px;
+}
+
+.link {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.subHead {
+    font-size: 25px;
+}
+
+.changeColor {
+    background-color: #F2F2F2 !important;
+}
+
+.changeColor span {
+    color: #52886E;
+}
+
+/* ---------------- 
+ *     BODY 
+ * ---------------- */
+ /* info/education */
+.about, .education {
+    border-style: solid;
+    border-color: #323232;
+    border-width: 2px;
+    min-height: 250px;
+    max-height: 500px;
+    min-width: 50%;
+    padding: 5px;
+    padding-bottom: 20px;
+    overflow: auto;
+}
+
+.editSize {
+    min-width: 100px;
+    padding-right: 10px;
+}
+
+.buttons {
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    left: 0;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    text-align: center;
+    height: 30px;
+    width: 100%;
+}
+
+.buttons a {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+p {
+    margin-left: 20px;
+}
+
+/* EXPERIENCE */
+.expImages {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.addColor {
+    background-color: #E2E2E2;
+    padding-top: 2px;
+    padding-bottom: 10px;
+}
+
+h5 {
+    padding-top: 10px;
+}
+
+/* SKILLS */
+.skills_header {
+    padding-top: 30px;
+    display: table;
+    width: 100%;
+    min-height: 60px;
+}
+
+.editHeader {
+    font-size: 20px;
+    margin-top: -9px;
+}
+
+.table-cell {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 500px;
+    height: auto;
+    z-index: 100;
+}
+
+.equal {
+    vertical-align: top;
+    border-style: solid;
+    border-color: #323232;
+    border-width: 2px;
+}
+
+.whitespace {
+    width: 29%;
+}
+
+.bar {
+    height: 20px;
+    width: 200px;
+    padding-top: 5px;
+}
+
+.dot {
+    width: 17%;
+    height: 50%;
+    margin-left: 3%;
+    margin-top: 1px;
+    float: left;
+    z-index: 2;
+    overflow: auto;
+}
+
+.goLeft {
+    float: left;
+    clear: left;
+}
+
+.goRight {
+    float: right;
+    clear: right;
+}
+
+.testText {
+    height: 20px;
+    width: 25%;
+    margin-top: -3px;
+    background-color: #F2F2F2;
+}
+
+.setColor {
+    background-color: #323232;
+}
+
+/* ---------------- 
+ *     FOOTER 
+ * ---------------- */
+.footer {
+    font-size: 11px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

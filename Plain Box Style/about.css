@@ -1,0 +1,25 @@
+html, body {
+    
+}
+
+/* HEADER */
+.container-fluid, .container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+ul li {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+/*BODY*/
+.about, .education {
+    border-style: solid;
+    border-width: 1px;
+}
+
+/*FOOTER */
+.footer {
+    font-size: 11px;
+}
