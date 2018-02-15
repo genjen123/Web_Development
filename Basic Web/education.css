@@ -1,0 +1,110 @@
+html, body {
+    background-color: #E9E9E9;
+    color: #3C3C3C;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+/* ---------------------------------------- */
+/*                 HEADER                   */
+/* ---------------------------------------- */
+#navigate {
+    padding-bottom: 70px;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 1000px;
+    text-align: center;
+    font-family: 'News Cycle', sans-serif;
+}
+
+#menu {
+    position: relative;
+    top: 60px;
+    font-size: 20pt;
+    letter-spacing: 2px;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-color: #3C3C3C;
+}
+
+#menu a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+a:link, a:visited {
+    color: #3C3C3C;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #7F7F7F;
+}
+
+/* ---------------------------------------- */
+/*                 Body                     */
+/* ---------------------------------------- */
+
+#main {
+    margin: auto;
+    width: 1000px;
+    min-height: 500px;
+    text-align: center;
+    padding-bottom: 150px;
+    padding-top: 10px;
+}
+
+.name {
+    max-width: 1000px;
+    font-family: 'Kristi', sans-serif;
+    text-align: left;
+    font-size: 90px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.description {
+    border-style: solid;
+    background-color: white;
+    padding: 10px;
+    text-align: left;
+    letter-spacing: 1px;
+    font-family: 'News Cycle', sans-serif;
+}
+
+/* ---------------------------------------- */
+/*                 Footer                   */
+/* ---------------------------------------- */
+
+#footer {
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    font-size: 10pt;
+    letter-spacing: 1px;
+    color: #7F7F7F;
+    text-align: center;
+}
+
+#icons a {
+    margin: 5px;
+    padding-bottom: 10px;
+}
+
+#rights {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
