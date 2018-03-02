@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel='stylesheet' href='index.css' type='text/css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand|Raleway">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="links.js"></script>
+    <title>Home</title>
+    
+    <!-- CSS STYLE -->
+    <style>
+        .portrait { margin-top: 20px; }
+        .portrait img { 
+            box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19); 
+            border: 3px solid black;
+        }
+        
+        .info { font-size: 18pt; }
+        .info a {
+            text-decoration: none;
+            color: #38B6B6;
+        }
+
+        .btn {
+            min-height: 40px;
+            min-width: 115px;
+            width: auto;
+            font-size: 17px;
+            letter-spacing: 1px;
+            border-radius: 3px;
+            border: solid 2px #4190BC;
+        }
+        
+        .setblock { margin: 10px -6px 10px 0px; }
+        .setblock a, .setblock a:link {
+            color: white;
+            background-color: #4190BC;
+            text-decoration: none;
+        }
+        .setblock a:visited {
+            color: white !important;
+        }
+        .setblock a:hover, .setblock a:active:focus {
+            font-weight: 600;
+            box-shadow: none !important;
+            background-color: white;
+            color: #4190BC !important;
+        }
+        
+        #facts {
+            min-height: 120px;
+            width: auto;
+            padding: 5px 0px 10px 0px;
+            text-align: center;
+        }
+        #facts h3 {
+            text-align: left;
+            font-size: 1.5em;
+            padding-bottom: 7px;
+        }
+        #facts h4 { font-size: 1.1em; }
+    </style>
+    
+    <!-- JQuery Script -->
+    <script>
+    $(document).ready(function(){
+        // Updates the Portrait margin
+        updatePortrait();
+        $(window).resize(updatePortrait);
+        
+        function updatePortrait() {
+            if($(window).width() < 769) { $("div.portrait").css("margin-top", 60); }
+            else{ $("div.portrait").css("margin-top", 20); }
+        }
+        
+        //Animate through text for "About Me" section
+        var facts = [
+            'Insert fact#1',
+            'Insert fact#2',
+            'Insert fact#3',
+            'Insert fact#4'
+        ];
+        
+        var index = Math.floor(Math.random() * (facts.length - 1));
+        var pos = index;
+        document.getElementById("txt-cycle").innerHTML = facts[pos];
+        $("#txt-cycle").hide().fadeIn(2500);
+        
+        (function animate() {
+            $("#txt-cycle").fadeOut(2500, function() {
+                pos = (pos + 1) % facts.length;
+                this.textContent = facts[pos];
+                
+            }).fadeIn(2500, animate);
+        })();
+    });
+    </script>
+</head>
+
+<body>
+<!-- Navigation bar -->
+<div id="navigation">
+    <a href="index.html" style="color:#38B6B6">HOME</a> /
+    <a href="about.html">ABOUT</a> /
+    <a href="portfolio.html">PORTFOLIO</a> /
+    <a href="contact.php">CONTACT</a>
+</div>
+
+<div class="container outer">
+    <div class="middle">
+        <div class="main">
+            <!-- Left body half-->
+            <div class="col-sm-6 col-md-6 portrait">
+                <img src="img/Portrait-Placement.png" width="330px" height="480px">
+            </div>
+            
+            <!-- Right body half -->
+            <div class="col-sm-6 col-md-6">
+                <div class="row">
+                    <div class="title">Name</div>
+                    <p class="info">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+                
+                <div class="row" style="text-align:center">
+                    <div class="col-xs-4 setblock">
+                        <a href="#" class="btn">Resume</a> </div>
+                    <div class="col-xs-4 setblock">
+                        <a href="portfolio.html" class="btn">Portfolio</a> </div>
+                    <div class="col-xs-4 setblock">
+                    	<a href="contact.php" class="btn">Contact</a> </div>
+                        <!-- OPTIONAL
+                        	<a href="#email" class="btn" data-toggle="collapse">Contact</a> </div> 
+                        -->
+                </div>
+                
+                <!-- Optional to use
+                <div id="email" class="collapse">
+                    Got a <b>project</b> or have further <b>questions</b>? Feel free 
+                    to contact me directly by email at
+                    <span style="color:#38B6B6; font-size:16px">youremail@source.com</span>
+                </div>
+                -->
+
+                <div id="facts">
+                    <h3>Fun facts:</h3>
+                    <h4><span id="txt-cycle"></span></h4>
+                </div>
+                
+                <div class="row" id="links" style="text-align:center">
+                    <a href="#">
+                        <img src="img/GitHub-Original.png" width="35px" height="35px" title="GitHub" id="git">
+                    </a>
+                    
+                    <a href="#">
+                        <img src="img/LinkedIn-Original.png" width="35px" height="35px" title="LinkedIn" id="linked">
+                    </a>
+                    
+                    <a href="#" download>
+                        <img src="img/Download-Original.png" width="35px" height="35px" title="Download Resume" id="download">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

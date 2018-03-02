@@ -1,0 +1,71 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* -----------------------
+ *  Classes in Navigation
+ * ----------------------- */
+#navigation {
+    position: absolute;
+    z-index: 1;
+    min-width: 98%;
+    padding: 20px;
+    font-size: 11pt;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: right;
+    font-family: 'Raleway', sans-serif;
+}
+
+#navigation a {
+    color: black;
+    text-decoration: none;
+}
+
+#navigation a:hover { color: #4190BC; }
+
+/* -----------------------
+ *  Classes in Main Body
+ * ----------------------- */
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.main {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* -----------------------
+ *  Classes in Right body
+ * ----------------------- */
+.title {
+    font-size: 36pt;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    padding: 20px 0px 5px 0px;
+    color: #4190BC;
+}
+
+.info { 
+    padding: 0px 0px 10px 0px; 
+}
+
+#links { padding: 3px 0px 15px 0px; }
+
+#links a { text-decoration: none; }
+
+#links img { margin: 2px; }

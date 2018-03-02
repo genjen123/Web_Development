@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel='stylesheet' href='index.css' type='text/css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand|Raleway">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="links.js"></script>
+    <script src="portfolio.js"></script>
+    <title>Portfolio</title>
+    
+    <style>
+    .info { 
+        max-width: 700px; 
+        font-size: 13pt;
+    }
+    
+    .info a {
+        text-decoration: none;
+        color: #38B6B6;
+    }
+    
+    .gallerybody:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    .imgbody {
+        float: left;
+        max-width: 25%;
+        padding: 5px;
+    }
+    .imgbody img { cursor: pointer; }
+    .imgbody img:hover { opacity: 0.8; }
+    
+    img.hover-shadow {
+        transition: 0.3s;
+    }
+    
+    .hover-shadow:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    }
+    
+    .cursor { cursor: pointer; }
+    
+    /* modal content */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 150px;
+        padding-bottom: 150px;
+        left: 0;
+        top: 0;
+        overflow: auto;
+        background-color: #CCE6F4;
+    }
+    
+    .modal-content {
+        position: relative;
+        background-color: #CCE6F4;
+        margin: auto;
+        width: 70%;
+        min-width: 60%;
+        border: none;
+        box-shadow: none;
+    }
+    
+    .close {
+        color: black;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 55px;
+        font-weight: 600;
+    }
+    
+    .close:hover, .close:focus {
+        color: #38B6B6;
+        text-decoration: none;
+    }
+    
+    .webSlides { display: none; }
+    
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 10px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 32px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+    
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    
+    .prev:hover, .next:hover {
+        text-decoration: none;
+        color: #38B6B6;
+    }
+    
+    .caption-container {
+        text-align: center;
+        margin: 5px;
+        background-color: #CCE6F4;
+        color: white;
+        font-weight: bold;
+        font-size: 32px;
+        letter-spacing: 0.5px;
+        font-family: 'Raleway', sans-serif;
+    }
+    
+    .webDemo { opacity: 0.6; }
+    
+    .active, .webDemo:hover { opacity: 1; }
+    </style>
+    
+    <!-- Updates the Title margin -->
+    <script>
+    $(document).ready(function(){
+        updateTitle();
+        $(window).resize(updateTitle);
+        
+        function updateTitle() {
+            if($(window).width() < 550) { $("div.title").css("margin-top", 40); }
+            else{ $("div.title").css("margin-top", 20); }
+        }
+    });
+    </script>
+</head>
+
+<body>
+<!-- Navigation bar -->
+<div id="navigation">
+    <a href="index.html">HOME</a> /
+    <a href="about.html"> ABOUT</a> /
+    <a href="portfolio.html" style="color:#38B6B6">PORTFOLIO</a> /
+    <a href="contact.php"> CONTACT</a>
+</div> 
+
+<div class="container outer">
+    <div class="middle">
+        <div class="main">
+            <div class="col-lg-12" style="text-align:left">
+                <div class="row">
+                    <!-- Design Section -->
+                    <div class="title">Designs</div>
+                    <p class="info">
+                        <b>See something you like?</b> All template codes are 
+                        available on <a href="#">GitHub</a>. <br>
+                        <b>Want something new?</b> Contact me with your request.
+                    </p>
+                    
+                    <!-- Gallery -->
+                    <div class="gallerybody">
+                        <div class="imgbody" style="min-width: 35%">
+                            <!-- change openWebModal() to add more -->
+                            <img src="img/Preview1.png" alt="" style="width:100%" onclick="openWebModal();currentWebSlide(1)" class="hover-shadow cursor">
+                        </div>
+                        <!-- change onclick function to add more
+                        <div class="imgbody">
+                            <img src="img/About.png" alt="" style="width:100%" onclick="expandCurrImg(this);">
+                        </div>
+                        -->
+                    </div>
+                    
+                    <div id="basicWeb" class="modal"> <!-- change id to add more -->
+                        <span class="close cursor" onclick="closeWebModal()">&times;</span> <!-- change closeWebModal() to add more -->
+                        <div class="modal-content">
+                            <!-- change class to add more -->
+                            <div class="webSlides"><img src="img/Preview1.png" style="width:100%"></div>
+                            <div class="webSlides"><img src="img/Preview2.png" style="width:100%"></div>
+                            <div class="webSlides"><img src="img/Preview3.png" style="width:100%"></div>
+                            <div class="webSlides"><img src="img/Preview4.png" style="width:100%"></div>
+                        
+                            <!-- change onclick to add more -->
+                            <a class="prev cursor" onclick="moveWebSlides(-1)">&#10094</a>
+                            <a class="next cursor" onclick="moveWebSlides(1)">&#10095</a>
+                            
+                            <div class="caption-container">
+                                <p id="basicWebInfo"></p>   <!-- change id for more -->
+                            </div>
+                            
+                            <!-- add more div for more images, change class to add more -->
+                            <div class="imgbody">
+                                <img src="img/Preview1.png" alt="Title 1" style="width:100%" onclick="currentWebSlide(1)" class="webDemo cursor">
+                            </div>
+                            <div class="imgbody">
+                                <img src="img/Preview2.png" alt="Title 2" style="width:100%" onclick="currentWebSlide(2)" class="webDemo cursor">
+                            </div>
+                            <div class="imgbody">
+                                <img src="img/Preview3.png" alt="Title 3" style="width:100%" onclick="currentWebSlide(3)" class="webDemo cursor">
+                            </div>
+                            <div class="imgbody">
+                                <img src="img/Preview4.png" alt="Title 4" style="width:100%" onclick="currentWebSlide(4)" class="webDemo cursor">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other account links -->
+                <div class="row" id="links" style="text-align:center">
+                    <a href="#">
+                        <img src="img/GitHub-Original.png" width="35px" height="35px" title="GitHub" id="git">
+                    </a>
+                    
+                    <a href="#">
+                        <img src="img/LinkedIn-Original.png" width="35px" height="35px" title="LinkedIn" id="linked">
+                    </a>
+                    
+                    <a href="#" download>
+                        <img src="img/Download-Original.png" width="35px" height="35px" title="Download Resume" id="download">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
